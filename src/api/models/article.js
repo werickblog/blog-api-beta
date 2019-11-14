@@ -1,5 +1,5 @@
 import nedb from 'nedb'
 
-const authDb = new nedb({ filename: 'users.db', autoload: true })
+const articleDb = new nedb({ filename: 'articles.db', autoload: true })
 
-export default authDb
+export default articleDb
