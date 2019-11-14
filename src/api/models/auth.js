@@ -1,5 +1,5 @@
 import nedb from "nedb";
 
-const articleDb = new nedb({ filename: "articles.db", autoload: true });
+const articleDb = new nedb({ filename: "users.db", autoload: true });
 
 export default articleDb;

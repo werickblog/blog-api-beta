@@ -6,6 +6,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 import chalk from "chalk";
 
+// Root route
+import Routes from './api/routes';
+
+// API
+import API from './api/api';
+
 const app = express();
 
 // Configure Dotenv to read environment variables from .env file
@@ -23,6 +29,9 @@ app.enable("trust proxy");
 
 // Enables CORS
 app.use(cors());
+
+// Define endpoints
+app.use(Routes.root, API)
 
 // Set port
 app.set("port", process.env.PORT || 6500);
